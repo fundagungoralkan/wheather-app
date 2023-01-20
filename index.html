@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="weather">
+            <div class="row">
+                <div class="col-6" id="weather temperature">
+                    <span class="temperature"></span>
+                    <span class="units">
+                        <a href="#" id="fahrenheit" class="active">℉ </a>|
+                        <a href="#" id="celsius">℃</a></span>
+
+                    <div class="humidity">Humidity:<strong> 84%</strong></div>
+                    <div class="wind">Wind: <strong> 8mph</strong></div>
+                </div>
+                <div class="col-6">
+                    <div class="city"></div>
+                    <div class="date"></div>
+                    <div class="description">
+                        <span><img class="icon" src="" alt="" /> </span>
+                        <span id="description"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-forecast" id="forecast"></div>
+            <form id="search-form">
+                <div class="row">
+                    <div class="col">
+                        <input type="search" placeholder="Enter a city.." id="search-input" />
+                    </div>
+                    <div class="col">
+                        <input type="submit" value="Search" id="search-btn" />
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
